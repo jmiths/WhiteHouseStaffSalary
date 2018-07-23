@@ -3,22 +3,22 @@ import pandas
 import matplotlib.pyplot as plt
 
 inflation = { # Convert to 2018 dollars
-        2003:136.95,
-        2004:133.40,
-        2005:129.03,
-        2006:124.99,
-        2007:121.53,
-        2008:117.04,
-        2009:117.46,
-        2010:115.56,
-        2011:112.03,
-        2012:109.75,
-        2013:108.17,
-        2014:106.44,
-        2015:106.32,
-        2016:104.99,
-        2017:102.94,
-        2018:100.00
+        2003:1.3695,
+        2004:1.3340,
+        2005:1.2903,
+        2006:1.2499,
+        2007:1.2153,
+        2008:1.1704,
+        2009:1.1746,
+        2010:1.1556,
+        2011:1.1203,
+        2012:1.0975,
+        2013:1.0817,
+        2014:1.0644,
+        2015:1.0632,
+        2016:1.0499,
+        2017:1.0294,
+        2018:1.0000
         }
 frames=[]
 keys=[]
@@ -42,7 +42,7 @@ for i in range(2009,2019):
     year.append(i)
     frames.append(comp)
 result = pandas.concat(frames)
-all_frames = pandas.concat(frames,keys=keys)
+all_frames = pandas.concat(frames,keys=year)
 ''' First Graph 
 result.boxplot(by=['YEAR'])
 plt.title("Boxplot of White House Staff Salary by Year")
